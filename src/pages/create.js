@@ -16,7 +16,7 @@ const Create = (props) => {
   useEffect(() => {
     async function getData() {
       const add = props.address;
-      const response = await axios.get("http://localhost:3001/data", {
+      const response = await axios.get("https://final-express.vercel.app/data", {
         params: {
           address: add,
           page: pageKey,

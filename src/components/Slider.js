@@ -27,7 +27,7 @@ const Carousel = () => {
   useEffect(() => {
     async function getData() {
       try {
-        const response = await axios.get("http://localhost:3001/counter");
+        const response = await axios.get("https://final-express.vercel.app/counter");
         setData(response.data);
         setIsLoaded(true);
       } catch (error) {
