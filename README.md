@@ -1,6 +1,6 @@
 # Rafflit NFT Raffle Dapp
 
-Project was built for the Alchemy Ethereum Bootcamp Final project.
+Rafflit was built as my Alchemy Ethereum Bootcamp Final project submission.
 
 ## How it Works:
 

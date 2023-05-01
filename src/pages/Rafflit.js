@@ -69,6 +69,7 @@ const Rafflit = () => {
           Create a Raffle for <br /> {data.description} <br />
           Token ID {data.tokenId}
         </h1>
+        <p></p>
         <div className="lg:flex justify-center gap-[15%] lg:mt-20">
           {/* //left side */}
           <div className="">

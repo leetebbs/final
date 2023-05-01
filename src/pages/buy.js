@@ -61,7 +61,7 @@ const Buy = () => {
   }
 
   return (
-    <div className="flex gap-10 mt-10 justify-center">
+    <div className="flex gap-10 mt-10 justify-center mb-10">
       <div className="bg-[#6e78b4] text-white p-10 rounded-lg flex flex-col">
         <p className="text-[20px] font-semibold">
           {item.metadata.description} <br /> {item.metadata.contract.symbol}
@@ -101,9 +101,11 @@ const Buy = () => {
           Tickets available {parseInt(ticketNumbers)} /{" "}
           {parseInt(item.transaction[5].hex)}{" "}
         </p>
-        <p className="text-[10px] mt-3">
-          Contract Address: {item.metadata.contract.address}
+        <p className="text-[12px] mb-1 mt-3">
+          NFT Address: {item.metadata.contract.address}
         </p>
+        <p className="text-[10px]">*** Raffle tickets cannot be refunded once bought, regardless of raffle results.</p>
+          <p className="text-[10px]">*** Owning the most tickets does NOT guarantee raffle wins.</p>
       </div>
       {/* <div className="bg-red-300 w-[400px] ">
         <button onClick={decrement}>-</button>
