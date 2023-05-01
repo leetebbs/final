@@ -12,7 +12,7 @@ const Winners = () => {
   useEffect(() => {
     async function getData() {
       try {
-        const response = await axios.get("http://localhost:3001/winners");
+        const response = await axios.get("https://final-express.vercel.app/winners");
         setData(response.data);
         setIsLoaded(true);
       } catch (error) {
