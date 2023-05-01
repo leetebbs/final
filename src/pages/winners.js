@@ -30,7 +30,7 @@ console.log("This is winners data   ", data);
             <div className='grid grid-cols-2 content-center'>
             {data.map((item, i) => (
                   <>
-                  <div className="flex mb-10 border-gray-600 border-4 rounded-lg w-[600px] overflow-clip " key={i}>
+                  <div className="lg:flex mb-10 border-gray-600 border-4 rounded-lg lg:w-[600px] overflow-clip " key={i}>
                   <div className="">
                       <img
                         className="w-auto h-[200px] rounded-lg "

@@ -2,12 +2,16 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
+import { useAccount, useSigner } from 'wagmi'
+
 // import {Abi} from "../ApproveAbi";
 import { raffleAbi } from "../Abi";
+
 const Buy = () => {
+  const { data: signer, isError, isLoading } = useSigner()
   const raffleAddress = "0xAA1f4F9386b67eF9cD4CBA5c75a688931C522681";
   const provider = new ethers.providers.Web3Provider(window.ethereum);
-  const signer = provider.getSigner();
+  // const signer = provider.getSigner();
   const raffleContract = new ethers.Contract(raffleAddress, raffleAbi, signer);
   const location = useLocation();
   const item = location.state.item;
@@ -35,8 +39,8 @@ const Buy = () => {
       //   console.log(receipt)
       alert("Transaction successful");
     } catch (error) {
-      console.log(error.data.message);
-      alert(error.data.message.slice(5, 39));
+      console.log(error.message);
+      alert(error.message.slice(0, 45));
     }
   };
 
