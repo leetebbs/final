@@ -41,7 +41,7 @@ const Carousel = () => {
   // console.log("This is the data   ", data);
 
   return (
-    <div className="text-[30px] font-semibold w-[95%] justify-center">
+    <div className="hidden md:block text-[30px] font-semibold w-[95%] justify-center">
       <h1 className="p-10 mt-14">Active Raffles</h1>
       {isLoaded ? (
         <Slider className="mb-10 font-normal" {...settings}>

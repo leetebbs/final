@@ -41,7 +41,7 @@ const Rafflit = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (ticketNumber && ticketPrice && rafflePeriod) {
+    if (ticketNumber && ticketPrice) {
       approve();
       createRaffle();
     } else {
@@ -64,12 +64,12 @@ const Rafflit = () => {
   return (
     <div>
       <div className="">
-        <h1 className="text-[25px]">
+        <h1 className="text-[25px] font-semibold  mt-10 mb-10">
           {/* <h1 className="mb-[30px] text-[15px] bg-[#6e78b4] text-white w-[40%] rounded-lg mx-auto"> */}
           Create a Raffle for <br /> {data.description} <br />
           Token ID {data.tokenId}
         </h1>
-        <div className="flex justify-center gap-[15%] mt-20">
+        <div className="lg:flex justify-center gap-[15%] lg:mt-20">
           {/* //left side */}
           <div className="">
             <div className="bg-[#6e78b4] w-[100%] rounded-lg  justify-center text-white text-[18px] pb-5 px-3">
@@ -102,7 +102,7 @@ const Rafflit = () => {
             </div>
           </div>
           {/* right side */}
-          <div className="my-auto">
+          <div className="my-auto mt-10 mb-10">
             <form className="flex flex-col" onSubmit={handleSubmit}>
               <label>Number of Tickets</label>
               <input

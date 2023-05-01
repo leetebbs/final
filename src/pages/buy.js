@@ -33,6 +33,7 @@ const Buy = () => {
       const receipt = await tx.wait();
       setTicketNumbers(parseInt(item.transaction[1].hex) - count);
       //   console.log(receipt)
+      alert("Transaction successful");
     } catch (error) {
       console.log(error.data.message);
       alert(error.data.message.slice(5, 39));

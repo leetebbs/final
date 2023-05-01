@@ -13,7 +13,7 @@ const Hero = () => {
           whileInView={"show"}
           viewport={{ once: true, amount: 0.7 }}
         >
-          <h3 className="text-5xl font-semibold text-start pt-20 pb-10  mt-[100px]">
+          <h3 className="text-5xl font-semibold text-start pt-20 pb-10  lg:mt-[100px]">
             Raffle Your NFT's
           </h3>
           <h3 className="text-2xl text-start text-gray-500">
@@ -21,7 +21,7 @@ const Hero = () => {
             same time with our NFT Raffles!
           </h3>
           <p className="text-1xl text-start mt-[20px] text-gray-500">
-            Raffle digital art or collectables straight from your wallet.
+            Raffle digital art and collectables straight from your wallet.
           </p>
           <button className="mt-[30px] bg-[#6e78b4] px-[10px] text-white py-[5px] rounded-lg">
             <Link to="/create">Create a Raffle</Link>
@@ -34,7 +34,7 @@ const Hero = () => {
           viewport={{ once: true, amount: 0.7 }}
           className=" w-[50%] flex justify-center mt-[40px] pl-[90px]"
         >
-          <img className="rounded-lg" src={Image} alt="" />
+          <img className="rounded-lg hidden md:block" src={Image} alt="" />
         </motion.div>
       </div>
     </div>

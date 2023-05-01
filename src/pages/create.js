@@ -55,7 +55,7 @@ const Create = (props) => {
         <p className="text-[50px]">{res}</p>
         <div className="flex gap-3 justify-center">
           {loading ? (
-            <div className="grid grid-cols-5 grid-flow-row gap-7 w-[100%]">
+            <div className="lg:grid lg:grid-cols-5 lg:grid-flow-row lg:gap-7 w-[100%]">
               {data.map((item, i) => (
                 <Card
                   key={i}

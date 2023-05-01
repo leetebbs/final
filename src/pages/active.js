@@ -26,10 +26,10 @@ const Active = () => {
     <div>
        <p className="text-semibold text-[30px] mb-10">Active Raffles</p>
       {isLoaded ? (
-        <div className="grid grid-cols-2">
+        <div className="grid lg:grid-cols-2">
           {data.map((item, i) => (
             <>
-            <div className="flex justify-center gap-5 mb-10 border-gray-600 border-4 rounded-lg w-[500px] overflow-clip ">
+            <div className="flex justify-center gap-5 mb-10 border-gray-600 border-4 rounded-lg lg:w-[500px] overflow-clip ">
             <div className="">
                 <img
                   className="w-auto h-[200px] rounded-lg "
@@ -41,12 +41,12 @@ const Active = () => {
                 <p className="">{item.metadata.contract.name}</p>
                 <p >TokenId: {item.metadata.tokenId}</p>
                 <p>RaffleId: {parseInt(item.transaction[0].hex)}</p>
-                <p>Number of Tickets: {parseInt(item.transaction[1].hex)}</p>
+                <p> Available: {parseInt(item.transaction[1].hex)} / {parseInt(item.transaction[5].hex)}</p>
                 <p>
-                  Price of Tickets:{" "}
+                  Price :{" "}
                   {parseInt(item.transaction[2].hex) / 10 ** 18} Matic
                 </p>
-                <button className="bg-[#6e78b4] w-[100px] text-white py-[5px] rounded-lg">
+                <button className="bg-[#6e78b4] w-[100px] text-white py-[5px] rounded-lg mt-auto">
                   <Link to="/buy" state={{ item }}>
                     Buy Tickets
                   </Link>

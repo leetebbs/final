@@ -11,19 +11,19 @@ const Navbar = () => {
     <div className="flex items-center lg:justify-between w-[97%] ">
       <Link to="/">
         <img
-          className="w-[60px] h-[60px] lg:w-[100px] lg:h-[100px]"
+          className="w-[60px] h-[60px] lg:w-[100px] lg:h-[100px]  w-[50px] h-[50px]"
           src={Logo}
           alt=""
         />
       </Link>
       <div className="">
         <input
-          className=" text-gray rounded-xl border-gray-400 border-2 lg:w-[120%] active:border-gray-600"
+          className=" hidden text-gray rounded-xl border-gray-400 border-2 lg:w-[120%] active:border-gray-600"
           type="text"
           placeholder=" Search"
         />
       </div>
-      <div className="flex flex-col lg:flex-row lg:gap-4 lg:ml-[60px]">
+      <div className="flex mx-7 lg:flex-row lg:gap-4 lg:ml-[60px]">
         <button className="btn">
           <Link to="/create">Create</Link>
         </button>
@@ -182,7 +182,7 @@ const Navbar = () => {
                         {/* {chain.name} */}
                       </button>
 
-                      <button onClick={openAccountModal} type="button">
+                      <button className="text-[10px] lg:text-[15px]" onClick={openAccountModal} type="button">
                         {account.displayName}
                         {account.displayBalance
                           ? ` (${account.displayBalance})`

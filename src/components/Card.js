@@ -19,7 +19,7 @@ const Card = (props) => {
 
   const data =props.data
   return (
-    <div className='w-[200px] h-[300px] bg-[#6e78b4] rounded-lg text-white flex flex-col'>
+    <div className='w-[250px] h-[350px] my-10  lg:my-0 lg:w-[200px] lg:h-[300px] bg-[#6e78b4] rounded-lg text-white flex flex-col mx-auto'>
         <img className='rounded-t-lg h-[200px]' src={image} alt="" />
         <p className='text-[9px] py-[6px]'>{props.title}</p>
         <p className='text-[8px] py-[6px]'>{props.description}</p>
