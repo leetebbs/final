@@ -16,12 +16,12 @@ const Carousel = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
     // centerMode: true,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 5000,
   };
 
   useEffect(() => {
@@ -51,7 +51,7 @@ const Carousel = () => {
                 <p className="text-[18px]">
                   {item.metadata.title ? item.metadata.title : <p>Un-Titled</p>}
                 </p>
-                <div className="flex gap-5 p-5 border-gray-500 border-2 rounded-lg">
+                <div className="flex gap-5 p-5 border-[#E16AF3] border-2 rounded-lg">
                   <div className="w-[150px] h-[150px] ">
                     <img
                       className=" rounded-lg w-{100%] h-[100%]"
@@ -62,7 +62,7 @@ const Carousel = () => {
                   <div className="flex flex-col ">
                     <div className="m-auto">
                       <p className="text-[15px]">
-                        Tickets available {parseInt(item.transaction[1].hex)} /{" "}
+                        Tickets  {parseInt(item.transaction[1].hex)} /{" "}
                         {parseInt(item.transaction[5].hex)}{" "}
                       </p>
                       <p className="text-[14px]">
@@ -71,7 +71,7 @@ const Carousel = () => {
                       </p>
                     </div>
 
-                    <button className="bg-[#6e78b4] rounded-lg text-white p-2 text-[16px] mt-auto">
+                    <button className=" rounded-lg text-[16px]">
                       <Link to="/buy" state={{ item }}>
                         Buy Tickets
                       </Link>

@@ -8,16 +8,17 @@ import "@rainbow-me/rainbowkit/styles.css";
 import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { configureChains, createClient, WagmiConfig } from "wagmi";
 import {
-  mainnet,
-  polygon,
-  optimism,
-  arbitrum,
+  // mainnet,
+  // polygon,
+  // optimism,
+  // arbitrum,
   polygonMumbai,
 } from "wagmi/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 const { chains, provider } = configureChains(
-  [mainnet, polygon, optimism, arbitrum, polygonMumbai],
+  // [mainnet, polygon, optimism, arbitrum, polygonMumbai],
+  [polygonMumbai],
   [
     alchemyProvider({ apiKey: "xeMXiUr8w7ZRX0odPnlQ-JQ1bFYuoUhb" }),
     publicProvider(),

@@ -25,12 +25,12 @@ const Winners = () => {
 console.log("This is winners data   ", data);
   return (
     <div className="">
-      <p className='text-[30px] font-semibold m-10'>Past Winners</p>
+      <p className='text-5xl font-semibold m-10'>Our Winners</p>
       {isLoaded ? (
-            <div className='grid grid-cols-2 content-center'>
+            <div className='grid grid-cols-2 ml-[20px]'>
             {data.map((item, i) => (
                   <>
-                  <div className="lg:flex mb-10 border-gray-600 border-4 rounded-lg lg:w-[600px] overflow-clip " key={i}>
+                  <div className="lg:flex mb-10 border-[#6e329c] border-4 rounded-lg lg:w-[600px] overflow-clip " key={i}>
                   <div className="">
                       <img
                         className="w-auto h-[200px] rounded-lg "

@@ -57,6 +57,8 @@ wagmi
 
 rainbowkit
 
+Tailwind
+
 ### Express server used for middleware
 
 https://github.com/leetebbs/final-express

@@ -19,12 +19,12 @@ const Card = (props) => {
 
   const data =props.data
   return (
-    <div className='w-[250px] h-[350px] my-10  lg:my-0 lg:w-[200px] lg:h-[300px] bg-[#6e78b4] rounded-lg text-white flex flex-col mx-auto'>
+    <div className='w-[250px] h-[350px] my-10  lg:my-0 lg:w-[220px] lg:h-[350px] bg-[#9152e9] rounded-lg text-white flex flex-col mx-auto border-[#6e329c] border-4 overflow-hidden'>
         <img className='rounded-t-lg h-[200px]' src={image} alt="" />
-        <p className='text-[9px] py-[6px]'>{props.title}</p>
+        <p className='text-[11px] py-[6px]'>{props.title}</p>
         <p className='text-[8px] py-[6px]'>{props.description}</p>
         <p className='text-[8px] py-[6px]'>{props.contract}</p>
-        <button className='bg-[#454b70]  rounded-lg mt-auto '><Link to="/rafflit" state={{data}}>RafflIt</Link></button>
+        <button className='  rounded-lg mt-auto mb-1 mx-1'><Link to="/rafflit" state={{data}}>RafflIt</Link></button>
     </div>
   )
 }

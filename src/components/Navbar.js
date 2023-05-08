@@ -11,27 +11,21 @@ const Navbar = () => {
     <div className="flex items-center lg:justify-between w-[97%] ">
       <Link to="/">
         <img
-          className="w-[60px] h-[60px] lg:w-[100px] lg:h-[100px]  w-[50px] h-[50px]"
-          src={Logo}
+          className="w-[60px] h-[60px] lg:w-[200px] lg:h-[100px]  w-[50px] h-[50px]"
+          src="https://images.cooltext.com/5656299.png"  
           alt=""
         />
       </Link>
-      <div className="">
-        <input
-          className=" hidden text-gray rounded-xl border-gray-400 border-2 lg:w-[120%] active:border-gray-600"
-          type="text"
-          placeholder=" Search"
-        />
-      </div>
+ 
       <div className="flex mx-7 lg:flex-row lg:gap-4 lg:ml-[60px]">
-        <button className="btn">
+        <button className="btn rounded-lg">
           <Link to="/create">Create</Link>
         </button>
 
         <button
           id="dropdownDefaultButton"
           data-dropdown-toggle="dropdown"
-          class="text-black  hover:bg-[#6e78b4] hover:text-white focus:ring-4 focus:outline-none focus:ring-[#6e78b4]  font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center  dark:hover:bg-gray-400 dark:focus:ring-gray-600"
+          class=" hover:text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
           type="button"
         >
           Explore{" "}
@@ -54,7 +48,7 @@ const Navbar = () => {
 
         <div
           id="dropdown"
-          class="z-10 hidden bg-[#6e78b4]  divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+          class="z-10 hidden bg-[#6e329c]  divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
         >
           <ul
             class="py-2 text-sm text-white dark:text-gray-200"
@@ -62,35 +56,35 @@ const Navbar = () => {
           >
             <li>
               <Link to="/">
-                <p class="block px-4 py-2 hover:bg-[#5b6494] dark:hover:bg-[#383e5c] dark:hover:text-white">
+                <p class="block px-4 py-2 hover:bg-[#3ec7e0]">
                   Home
                 </p>
               </Link>
             </li>
             <li>
               <Link to="/active">
-                <p class="block px-4 py-2 hover:bg-[#5b6494] dark:hover:bg-[#383e5c] dark:hover:text-white">
+                <p class="block px-4 py-2 hover:bg-[#3ec7e0] ">
                   Active Raffles
                 </p>
               </Link>
             </li>
             <li>
               <Link to="/dashboard">
-                <p class="block px-4 py-2 hover:bg-[#5b6494] dark:hover:bg-[#383e5c] dark:hover:text-white">
+                <p class="block px-4 py-2 hover:bg-[#3ec7e0] ">
                   Dashboard
                 </p>
               </Link>
             </li>
             <li>
               <Link to="/winners">
-                <p class="block px-4 py-2 hover:bg-[#5b6494] dark:hover:bg-[#383e5c] dark:hover:text-white">
+                <p class="block px-4 py-2 hover:bg-[#3ec7e0] ">
                   Winners
                 </p>
               </Link>
             </li>
             <li>
               <Link to="/works">
-                <p class="block px-4 py-2 hover:bg-[#5b6494] dark:hover:bg-[#383e5c] dark:hover:text-white">
+                <p class="block px-4 py-2 hover:bg-[#3ec7e0] ">
                   How it works
                 </p>
               </Link>

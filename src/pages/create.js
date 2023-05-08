@@ -6,6 +6,7 @@ import monkey from "../assets/monkey.png";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Loading from "../components/Loading";
+import { useAccount } from "wagmi";
 
 const Create = (props) => {
   const [data, setData] = useState([]);
@@ -32,7 +33,12 @@ const Create = (props) => {
         setPageKey(response.data.pageKey);
         console.log(prevPageKey)
         console.log(response.data.pageKey);
-        setLoading(true);
+        if(useAccount.address){
+          setLoading(false)
+        }else{
+          setLoading(true)
+        }
+        // setLoading(true);
       }
       // setData(response.data.ownedNfts);
       // setPrevPageKey(pageKey)
@@ -50,10 +56,10 @@ const Create = (props) => {
   return (
     <div>
       <div className="">
-        <h1 className="font-semibold text-3xl  my-10"> Create A New Raffle</h1>
+        <h1 className="font-semibold text-5xl  my-10"> Create A New Raffle</h1>
         <p className="m-[30px]">Choose an NFT to create a new raffle!</p>
         <p className="text-[50px]">{res}</p>
-        <div className="flex gap-3 justify-center">
+        <div className="flex gap-3 justify-center mb-20">
           {loading ? (
             <div className="lg:grid lg:grid-cols-5 lg:grid-flow-row lg:gap-7 w-[100%]">
               {data.map((item, i) => (
