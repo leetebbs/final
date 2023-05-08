@@ -25,7 +25,7 @@ const Winners = () => {
 console.log("This is winners data   ", data);
   return (
     <div className="">
-      <p className='text-5xl font-semibold m-10'>Our Winners</p>
+      <p className='text-5xl font-semibold m-10'>Our <span className='text-[#E16AF3]'>Winners</span></p>
       {isLoaded ? (
             <div className='grid grid-cols-2 ml-[20px]'>
             {data.map((item, i) => (

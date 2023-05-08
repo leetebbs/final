@@ -86,13 +86,13 @@ const Dashboard = () => {
   wins();
   return (
     <div className="mb-20">
-      <h1 className="text-3xl font-bold mb-3">Dashboard</h1>
+      <h1 className="text-5xl font-bold mt-10 mb-10 text-[#E16AF3]">Dashboard</h1>
       <p className="font-semibold text-xl mb-3">
         Total earned from raffles {earnings / 10 ** 18} Matic - FEES **
       </p>
       <p className="font-semibold text-[30px] mb-6">
         {" "}
-        you have {numberActive} active raffles
+        you have <span className="text-[#E16AF3]">{numberActive}</span> active raffles
       </p>
       {isLoaded ? (
         <div className="mb-10">
@@ -139,7 +139,7 @@ const Dashboard = () => {
       )}
       {/* //tickets sold and available */}
       <p className="font-semibold text-[30px] mb-5">
-        You have {numberComplete} completed raffles
+        You have <span className="text-[#E16AF3]">{numberComplete}</span> completed raffles
       </p>
       {isLoaded ? (
         <div className="">
