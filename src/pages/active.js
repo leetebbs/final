@@ -26,7 +26,9 @@ const Active = () => {
 
   return (
     <div className="">
-      <p className="text-semibold text-[60px] mb-10">Active <span className="text-[#E16AF3]" >Raffles</span></p>
+      <p className="text-semibold text-[60px] mb-10">
+        Active <span className="text-[#E16AF3]">Raffles</span>
+      </p>
       {isLoaded ? (
         <div className="lg:grid lg:grid-cols-2 lg:grid-flow-row lg: w-[100%]">
           {data.map((item, i) => (

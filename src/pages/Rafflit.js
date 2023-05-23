@@ -73,7 +73,7 @@ const Rafflit = () => {
         <div className="lg:flex justify-center gap-[15%] lg:mt-20">
           {/* //left side */}
           <div className="">
-            <div className="bg-[#6e78b4] w-[100%] rounded-lg  justify-center text-white text-[18px] pb-5 px-3">
+            <div className=" w-[100%] rounded-lg  justify-center text-white text-[18px] pb-5 px-3">
               <div className=" py-3">
                 <img
                   className="w-[200px] m-auto rounded-lg my-3"
@@ -107,7 +107,7 @@ const Rafflit = () => {
             <form className="flex flex-col" onSubmit={handleSubmit}>
               <label>Number of Tickets</label>
               <input
-                className="bg-[#6e78b4] w-[100%] rounded-lg  justify-center text-center text-white text-[18px] pb-5 px-3 mb-1"
+                className="bg-gradient-to-r from-[#6e329c] to-[#4C0959] w-[100%] rounded-lg  justify-center text-center text-white text-[18px] pb-5 px-3 mb-1"
                 id="ticketNumber"
                 placeholder="Number of Tickets"
                 value={ticketNumber}
@@ -115,22 +115,14 @@ const Rafflit = () => {
               />
               <label>Price of Tickets in Matic</label>
               <input
-                className="bg-[#6e78b4] w-[100%] rounded-lg  justify-center text-center text-white text-[18px] pb-5 px-3 mb-1"
+                className="bg-gradient-to-r from-[#6e329c] to-[#4C0959] w-[100%] rounded-lg  justify-center text-center text-white text-[18px] pb-5 px-3 mb-1"
                 id="ticketPrice"
                 placeholder="Price of Tickets"
                 value={ticketPrice}
                 onChange={(event) => setTicketPrice(event.target.value)}
               />
-              {/* <label>Raffle period in days</label>
-              <input
-                className="bg-[#6e78b4] w-[100%] rounded-lg  justify-center text-center text-white text-[18px] pb-5 px-3 mb-1"
-                id="rafflePeriod"
-                placeholder="raffle Period"
-                value={rafflePeriod}
-                onChange={(event) => setRafflePeriod(event.target.value)}
-              /> */}
               <button
-                className="mx-auto bg-[#6e78b4] w-[80px] text-white py-[5px] rounded-lg mt-5"
+                className="mx-auto bg-gradient-to-r from-[#6e329c] to-[#4C0959] w-[80px] text-white  rounded-lg mt-5"
                 type="submit"
               >
                 Submit

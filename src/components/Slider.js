@@ -27,7 +27,9 @@ const Carousel = () => {
   useEffect(() => {
     async function getData() {
       try {
-        const response = await axios.get("https://final-express.vercel.app/counter");
+        const response = await axios.get(
+          "https://final-express.vercel.app/counter"
+        );
         setData(response.data);
         setIsLoaded(true);
       } catch (error) {
@@ -62,7 +64,7 @@ const Carousel = () => {
                   <div className="flex flex-col ">
                     <div className="m-auto">
                       <p className="text-[15px]">
-                        Tickets  {parseInt(item.transaction[1].hex)} /{" "}
+                        Tickets {parseInt(item.transaction[1].hex)} /{" "}
                         {parseInt(item.transaction[5].hex)}{" "}
                       </p>
                       <p className="text-[14px]">

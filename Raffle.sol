@@ -157,22 +157,6 @@ contract Raffled is ReentrancyGuard, VRFConsumerBaseV2, ConfirmedOwner {
         counter = counter + 1;
     }
 
-    // cancel a raffle and return funds
-    function returnNft(
-        address _nftAddress,
-        uint256 _tokenId,
-        uint256 _raffleId
-    ) external {
-        Raffle storage _raffle = raffle[_raffleId];
-        require(_raffle.owner == msg.sender, "You are not the raffle owner");
-        //check if msg.sender is the original owner of the nft
-        // return money to buyers of the raffle
-        //get number of tickets sold and times by ticket price then get 2% of that number and charge the canceller address for cancelling
-        //return nft to owner
-        //set raffle active to false
-        IERC721(_nftAddress).transferFrom(address(this), msg.sender, _tokenId);
-    }
-
     // sell tickets for a raffle and store players
 
     function buyTicket(uint256 _raffleId, uint256 _numberOfTickets)

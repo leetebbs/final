@@ -12,11 +12,11 @@ const Navbar = () => {
       <Link to="/">
         <img
           className="w-[60px] h-[60px] lg:w-[200px] lg:h-[100px]  w-[50px] h-[50px]"
-          src="https://images.cooltext.com/5656299.png"  
+          src="https://images.cooltext.com/5656299.png"
           alt=""
         />
       </Link>
- 
+
       <div className="flex mx-7 lg:flex-row lg:gap-4 lg:ml-[60px]">
         <button className="btn rounded-lg">
           <Link to="/create">Create</Link>
@@ -56,9 +56,7 @@ const Navbar = () => {
           >
             <li>
               <Link to="/">
-                <p class="block px-4 py-2 hover:bg-[#3ec7e0]">
-                  Home
-                </p>
+                <p class="block px-4 py-2 hover:bg-[#3ec7e0]">Home</p>
               </Link>
             </li>
             <li>
@@ -70,26 +68,19 @@ const Navbar = () => {
             </li>
             <li>
               <Link to="/dashboard">
-                <p class="block px-4 py-2 hover:bg-[#3ec7e0] ">
-                  Dashboard
-                </p>
+                <p class="block px-4 py-2 hover:bg-[#3ec7e0] ">Dashboard</p>
               </Link>
             </li>
             <li>
               <Link to="/winners">
-                <p class="block px-4 py-2 hover:bg-[#3ec7e0] ">
-                  Winners
-                </p>
+                <p class="block px-4 py-2 hover:bg-[#3ec7e0] ">Winners</p>
               </Link>
             </li>
             <li>
               <Link to="/works">
-                <p class="block px-4 py-2 hover:bg-[#3ec7e0] ">
-                  How it works
-                </p>
+                <p class="block px-4 py-2 hover:bg-[#3ec7e0] ">How it works</p>
               </Link>
             </li>
-     
           </ul>
         </div>
       </div>
@@ -131,7 +122,7 @@ const Navbar = () => {
                       <button
                         onClick={openConnectModal}
                         type="button"
-                        className="bg-[#6e78b4] text-white w-[80px] rounded-lg px-1 py-1"
+                        className="bg-gradient-to-r from-[#6e329c] to-[#4C0959] text-white w-[80px] rounded-lg px-1 "
                       >
                         Connect
                       </button>
@@ -176,7 +167,11 @@ const Navbar = () => {
                         {/* {chain.name} */}
                       </button>
 
-                      <button className="text-[10px] lg:text-[15px]" onClick={openAccountModal} type="button">
+                      <button
+                        className="text-[10px] lg:text-[15px]"
+                        onClick={openAccountModal}
+                        type="button"
+                      >
                         {account.displayName}
                         {account.displayBalance
                           ? ` (${account.displayBalance})`

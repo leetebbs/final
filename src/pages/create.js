@@ -1,8 +1,5 @@
 import React from "react";
 import Card from "../components/Card";
-import test from "../assets/test.png";
-import dread from "../assets/dread.png";
-import monkey from "../assets/monkey.png";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Loading from "../components/Loading";
@@ -17,47 +14,47 @@ const Create = (props) => {
   useEffect(() => {
     async function getData() {
       const add = props.address;
-      const response = await axios.get("https://final-express.vercel.app/data", {
-        params: {
-          address: add,
-          page: pageKey,
-        },
-      });
-      if(response.data === "You dont have any NFTS"){
-        console.log("You dont have any NFTS")
-        setLoading(true)
-        setRes("You dont have any NFTS!")
-      }else{
-        setData(response.data.ownedNfts);
-        setPrevPageKey(pageKey)
-        setPageKey(response.data.pageKey);
-        console.log(prevPageKey)
-        console.log(response.data.pageKey);
-        if(useAccount.address){
-          setLoading(false)
-        }else{
-          setLoading(true)
+      const response = await axios.get(
+        "https://final-express.vercel.app/data",
+        {
+          params: {
+            address: add,
+            page: pageKey,
+          },
         }
-        // setLoading(true);
+      );
+      if (response.data === "You dont have any NFTS") {
+        console.log("You dont have any NFTS");
+        setLoading(true);
+        setRes("You dont have any NFTS!");
+      } else {
+        setData(response.data.ownedNfts);
+        setPrevPageKey(pageKey);
+        setPageKey(response.data.pageKey);
+        console.log(prevPageKey);
+        console.log(response.data.pageKey);
+        if (useAccount.address) {
+          setLoading(false);
+        } else {
+          setLoading(true);
+        }
       }
-      // setData(response.data.ownedNfts);
-      // setPrevPageKey(pageKey)
-      // setPageKey(response.data.pageKey);
-      // console.log(prevPageKey)
-      // console.log(response.data.pageKey);
-      // setLoading(true);
     }
 
     getData();
   }, []);
 
-  // console.log(data);
-
   return (
     <div>
       <div className="">
-        <h1 className="font-semibold text-5xl  my-10"> Create A New Raffle</h1>
-        <p className="m-[30px]">Choose an NFT to create a new raffle!</p>
+        <h1 className="font-semibold text-5xl  my-10">
+          {" "}
+          Create A <span className="text-[#E16AF3]">New</span> Raffle
+        </h1>
+        <p className="m-[30px]">
+          Choose an NFT to create a <span className="text-[#E16AF3]">New</span>{" "}
+          raffle!
+        </p>
         <p className="text-[50px]">{res}</p>
         <div className="flex gap-3 justify-center mb-20">
           {loading ? (
@@ -78,9 +75,8 @@ const Create = (props) => {
             </div>
           ) : (
             <div className="">
-            <Loading />
+              <Loading />
             </div>
-
           )}
         </div>
         <div className="">
