@@ -26,11 +26,11 @@ const Active = () => {
 
   return (
     <div className="">
-      <p className="text-semibold text-[60px] mb-10">
+      <p className="text-semibold text-[60px] mb-10 ">
         Active <span className="text-[#E16AF3]">Raffles</span>
       </p>
       {isLoaded ? (
-        <div className="lg:grid lg:grid-cols-2 lg:grid-flow-row lg: w-[100%]">
+        <div className="lg:grid lg:grid-cols-2 lg:grid-flow-row lg: w-[100%] px-2">
           {data.map((item, i) => (
             <>
               <div className="flex justify-center gap-5 mb-10 mx-auto border-[#6e329c] border-4 rounded-lg lg:w-[500px] overflow-clip ">

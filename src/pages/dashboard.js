@@ -101,14 +101,14 @@ const Dashboard = () => {
               <div className="flex justify-center gap-5 mb-5 border-[#6e329c] border-4 rounded-lg lg:w-90% overflow-clip ">
                 <div className="">
                   <img
-                    className="w-auto h-[70px] "
+                    className="w-auto lg:h-[70px] h-[100px] "
                     src={item.metadata.media[0].gateway}
                     alt=""
                   />
                 </div>
-                <div className="flex gap-[130px] justify-center my-auto">
-                  <p className="my-auto">{item.metadata.contract.name}</p>
-                  <p>
+                <div className="flex lg:gap-[130px] justify-center my-auto">
+                  <p className="my-auto hidden lg:block">{item.metadata.contract.name}</p>
+                  <p className="hidden lg:block">
                     TokenId: <br /> {item.metadata.tokenId}
                   </p>
                   <p>
@@ -121,7 +121,7 @@ const Dashboard = () => {
                     {parseInt(item.transaction[5].hex)}
                   </p>
                   <p>
-                    Ticket Price : <br />
+                    Ticket Price: <br />
                     {parseInt(item.transaction[2].hex) / 10 ** 18} Matic
                   </p>
                 </div>
@@ -154,24 +154,24 @@ const Dashboard = () => {
                   />
                 </div>
 
-                <div className="flex gap-[140px] justify-center my-auto">
-                  <p className="">{item.metadata.contract.name}</p>
-                  <p>
+                <div className="flex lg:gap-[140px] gap-[20px] justify-center my-auto">
+                  <p className="hidden lg:block">{item.metadata.contract.name}</p>
+                  <p className="">
                     TokenId: <br /> {item.metadata.tokenId}
                   </p>
-                  <p>
+                  <p className="hidden lg:block ">
                     RaffleId: <br /> {parseInt(item.transaction[0].hex)}
                   </p>
-                  <p>
+                  <p className="">
                     {" "}
                     Sold: <br />
                     {parseInt(item.transaction[5].hex)}
                   </p>
-                  <p>
+                  <p className="hidden lg:block">
                     Price : <br />
                     {parseInt(item.transaction[2].hex) / 10 ** 18} Matic
                   </p>
-                  <p>
+                  <p className="">
                     Earnings: <br />{" "}
                     {(parseInt(item.transaction[5].hex) *
                       parseInt(item.transaction[2].hex)) /

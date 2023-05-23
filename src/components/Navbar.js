@@ -11,7 +11,7 @@ const Navbar = () => {
     <div className="flex items-center lg:justify-between w-[97%] ">
       <Link to="/">
         <img
-          className="w-[60px] h-[60px] lg:w-[200px] lg:h-[100px]  w-[50px] h-[50px]"
+          className="hidden lg:block w-[60px] h-[60px] lg:w-[200px] lg:h-[100px]  w-[50px] h-[50px]"
           src="https://images.cooltext.com/5656299.png"
           alt=""
         />
@@ -168,14 +168,14 @@ const Navbar = () => {
                       </button>
 
                       <button
-                        className="text-[10px] lg:text-[15px]"
+                        className="text-[10px] lg:text-[15px] "
                         onClick={openAccountModal}
                         type="button"
                       >
                         {account.displayName}
-                        {account.displayBalance
+                        {/* {account.displayBalance
                           ? ` (${account.displayBalance})`
-                          : ""}
+                          : ""} */}
                       </button>
                     </div>
                   );

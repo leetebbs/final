@@ -13,6 +13,7 @@ const Hero = () => {
           whileInView={"show"}
           viewport={{ once: true, amount: 0.7 }}
         >
+          <img className="lg:hidden mx-auto" src="https://images.cooltext.com/5656299.png" alt="" />
           <h3 className="text-6xl font-semibold text-start pt-20 pb-10  lg:mt-[100px]">
             Raffle Your <span className="text-[#E16AF3]">NFT's</span>
           </h3>

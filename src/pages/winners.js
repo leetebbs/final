@@ -27,7 +27,7 @@ console.log("This is winners data   ", data);
     <div className="">
       <p className='text-5xl font-semibold m-10'>Our <span className='text-[#E16AF3]'>Winners</span></p>
       {isLoaded ? (
-            <div className='grid grid-cols-2 ml-[20px]'>
+            <div className='grid grid-cols-2 lg:ml-[20px]'>
             {data.map((item, i) => (
                   <>
                   <div className="lg:flex mb-10 border-[#6e329c] border-4 rounded-lg lg:w-[600px] overflow-clip " key={i}>
@@ -47,7 +47,7 @@ console.log("This is winners data   ", data);
                         Price of Tickets:{" "}
                         {parseInt(item.transaction[2].hex) / 10 ** 18} Matic
                       </p>
-                      <p className='bg-[#b29146] m-2 p-2 rounded-lg mb-0 font-semibold'>Winner: <span className='font-normal'>{item.winner}</span></p>
+                      <p className='bg-[#b29146] m-2 p-2 rounded-lg mb-0 font-semibold'>Winner: <span className='font-normal '>{item.winner}</span></p>
                     </div>
                   </div>
       
