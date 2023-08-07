@@ -11,6 +11,8 @@ const Dashboard = () => {
   const [completeData, setCompleteData] = useState([]);
   //Loading state
   const [isLoaded, setIsLoaded] = useState(false);
+  //usersActive raffles
+  const [usersActive, setUsersActive] = useState([]);
 
   //Array of connected users active raffles
   const active = [];
@@ -54,6 +56,27 @@ const Dashboard = () => {
 
     getData();
   }, []);
+
+    // get Data for user active raffles
+  useEffect(() => {
+    async function getData() {
+      try {
+        const response = await axios.get(
+          "https://final-express.vercel.app/usersActiveRaffles"
+        );
+        setUsersActive(response.data);
+        setIsLoaded(true);
+        console.log("active users raffle data ", response.data);
+      } catch (error) {
+        console.log("Error fetching data", error);
+      }
+    }
+
+    getData();
+  }, []);
+
+
+  // get data for users completed raffles
 
   if (isLoaded) {
     //set active raffles for connected user

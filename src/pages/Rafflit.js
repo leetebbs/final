@@ -9,7 +9,8 @@ import { raffleAbi } from "../Abi";
 const Rafflit = () => {
   const location = useLocation();
   const { data } = location.state;
-  const raffleAddress = "0xAA1f4F9386b67eF9cD4CBA5c75a688931C522681";
+  const raffleAddress = "0xAA1f4F9386b67eF9cD4CBA5c75a688931C522681";//original 
+  // const raffleAddress = "0x172990f74120d3d7F69Cf79f4A3eE4bbcd1015A0"; //added search
   const [ticketPrice, setTicketPrice] = useState("");
   const [ticketNumber, setTicketNumber] = useState("");
   const [rafflePeriod, setRafflePeriod] = useState("");

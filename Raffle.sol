@@ -9,10 +9,9 @@ import "@chainlink/contracts/src/v0.8/VRFConsumerBaseV2.sol";
 import "@chainlink/contracts/src/v0.8/ConfirmedOwner.sol";
 
 contract Raffled is ReentrancyGuard, VRFConsumerBaseV2, ConfirmedOwner {
-
     event RequestSent(uint256 requestId, uint32 numWords);
     event RequestFulfilled(uint256 requestId, uint256[] randomWords);
-    event Winner(uint256 raffleId,address winner);
+    event Winner(uint256 raffleId, address winner);
     event RaffleCreated(
         address indexed _from,
         uint256 indexed _id,
@@ -29,7 +28,6 @@ contract Raffled is ReentrancyGuard, VRFConsumerBaseV2, ConfirmedOwner {
         address nftAddress;
         address owner;
         bool raffleActive;
-
     }
 
     struct RequestStatus {
@@ -41,7 +39,7 @@ contract Raffled is ReentrancyGuard, VRFConsumerBaseV2, ConfirmedOwner {
     mapping(uint256 => mapping(uint256 => address)) public raffleTicketHolders;
     mapping(uint256 => address) public winners;
     mapping(uint256 => RequestStatus) public s_requests; /* requestId --> requestStatus */
-    
+
     VRFCoordinatorV2Interface COORDINATOR;
 
     // Your subscription ID.
@@ -49,7 +47,7 @@ contract Raffled is ReentrancyGuard, VRFConsumerBaseV2, ConfirmedOwner {
     uint32 callbackGasLimit = 500000;
     uint32 numWords = 1;
     uint64 s_subscriptionId;
-    uint256 public counter = 0; 
+    uint256 public counter = 0;
     uint256 public fee = 10;
     uint256 public lastRequestId;
     uint256 public result;
@@ -124,7 +122,7 @@ contract Raffled is ReentrancyGuard, VRFConsumerBaseV2, ConfirmedOwner {
         // call the winner here ?
     }
 
-    //set owner fee
+    //set owner fee as percentage
     function setFee(uint256 _fee) external onlyOwner {
         fee = _fee;
     }
@@ -150,7 +148,6 @@ contract Raffled is ReentrancyGuard, VRFConsumerBaseV2, ConfirmedOwner {
                 _nftAddress,
                 msg.sender,
                 true
-
             )
         );
         emit RaffleCreated(msg.sender, counter, _numberOfTickets);
@@ -190,7 +187,8 @@ contract Raffled is ReentrancyGuard, VRFConsumerBaseV2, ConfirmedOwner {
         Raffle storage _raffle = raffle[whichRaffleId];
         address getNftAddress = _raffle.nftAddress;
         winner = raffleTicketHolders[whichRaffleId][result];
-        uint256 totalPrice = _raffle.priceOfTickets * _raffle._initialNumberOfTickets;
+        uint256 totalPrice = _raffle.priceOfTickets *
+            _raffle._initialNumberOfTickets;
         uint256 fees = (totalPrice / 100) * fee;
         uint256 returnValue = totalPrice - fees;
         IERC721(getNftAddress).transferFrom(

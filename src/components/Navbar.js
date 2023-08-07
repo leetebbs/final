@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState} from "react";
 import Logo from "../assets/rafflit-1.png";
 import eth from "../assets/ethlogo.png";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
@@ -7,6 +7,9 @@ import "flowbite";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
   return (
     <div className="flex items-center lg:justify-between w-[97%] ">
       <Link to="/">
@@ -27,6 +30,7 @@ const Navbar = () => {
           data-dropdown-toggle="dropdown"
           class=" hover:text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
           type="button"
+          onClick={() => setIsDropdownOpen(!isDropdownOpen)} // Toggle dropdown
         >
           Explore{" "}
           <svg
@@ -48,36 +52,37 @@ const Navbar = () => {
 
         <div
           id="dropdown"
-          class="z-10 hidden bg-[#6e329c]  divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+          // class="z-10 hidden bg-[#6e329c]  divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+          className={`z-10 ${isDropdownOpen ? '' : 'hidden'} bg-[#6e329c] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700`}
         >
           <ul
             class="py-2 text-sm text-white dark:text-gray-200"
             aria-labelledby="dropdownDefaultButton"
           >
             <li>
-              <Link to="/">
+              <Link to="/" onClick={() => setIsDropdownOpen(false)}>
                 <p class="block px-4 py-2 hover:bg-[#3ec7e0]">Home</p>
               </Link>
             </li>
             <li>
-              <Link to="/active">
+              <Link to="/active" onClick={() => setIsDropdownOpen(false)}>
                 <p class="block px-4 py-2 hover:bg-[#3ec7e0] ">
                   Active Raffles
                 </p>
               </Link>
             </li>
             <li>
-              <Link to="/dashboard">
+              <Link to="/dashboard" onClick={() => setIsDropdownOpen(false)}>
                 <p class="block px-4 py-2 hover:bg-[#3ec7e0] ">Dashboard</p>
               </Link>
             </li>
             <li>
-              <Link to="/winners">
+              <Link to="/winners" onClick={() => setIsDropdownOpen(false)}>
                 <p class="block px-4 py-2 hover:bg-[#3ec7e0] ">Winners</p>
               </Link>
             </li>
             <li>
-              <Link to="/works">
+              <Link to="/works" onClick={() => setIsDropdownOpen(false)}>
                 <p class="block px-4 py-2 hover:bg-[#3ec7e0] ">How it works</p>
               </Link>
             </li>

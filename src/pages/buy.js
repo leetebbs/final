@@ -33,7 +33,7 @@ const Buy = () => {
     const raffleId = parseInt(item.transaction[0].hex);
     try {
       const tx = await raffleContract.buyTicket(raffleId, count, {
-        value: ethers.utils.parseUnits(newCost, "ether"),
+        value: ethers.utils.parseUnits(newCost, "ether", {gaslimit: 500000}),
       });
       const receipt = await tx.wait();
       console.log(receipt, "receipt");
