@@ -88,3 +88,7 @@ You may also see any lint errors in the console.
 ## Landing page
 
 ![Project landingpage](https://github.com/leetebbs/final/blob/main/rafflit-landing.png)
+
+### Create a raffle
+
+![Create](https://github.com/leetebbs/final/blob/main/rafflit-create-araffle.png)
